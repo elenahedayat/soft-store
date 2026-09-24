@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soft Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">softstore</a>
+
+    <nav class="nav">
+      <a href="#">Shop</a>
+      <a href="#">Collections</a>
+      <a href="#">About</a>
+    </nav>
+    <div class="dropdown" id="user-menu">
+      <button type="button" class="dropdown-toggle" id="user-toggle" aria-expanded="false">
+        Account ▾
+      </button>
+      <ul class="dropdown-menu" id="user-dropdown" hidden>
+        <li data-action="profile">My Profile</li>
+        <li data-action="orders">Orders</li>
+        <li data-action="logout">Log out</li>
+      </ul>
+    </div>
+  </header>
+  <main class="page">
+    <section class="product">
+      <div class="product-image">
+        <img
+          src="image.png"
+          alt="Classic watch"
+        />
+      </div>
+
+      <div class="product-info">
+        <p class="eyebrow">Accessories</p>
+        <h1>Minimal Watch</h1>
+        <p class="price">$129.00</p>
+        <p class="desc">
+          A clean everyday watch with a soft leather strap and quiet design.
+        </p>
+        <div class="actions">
+          <button type="button" class="btn primary">Add to Cart</button>
+          <button type="button" class="btn ghost" id="open-login">Sign in to buy faster</button>
+        </div>
+        <div class="tabs" id="product-tabs">
+          <button type="button" class="tab-btn active" data-tab="description">Description</button>
+          <button type="button" class="tab-btn" data-tab="reviews">Reviews</button>
+          <button type="button" class="tab-btn" data-tab="shipping">Shipping</button>
+        </div>
+        <div class="tab-panels">
+          <div class="tab-panel active" id="description">
+            <p>
+              Matte case, sapphire glass, and a strap made for daily wear.
+              Water-resistant and light enough for all-day comfort.
+            </p>
+          </div>
+          <div class="tab-panel" id="reviews">
+            <p><strong>Sara:</strong> Beautiful and simple. Worth it.</p>
+            <p><strong>Alex:</strong> Great quality for the price.</p>
+          </div>
+          <div class="tab-panel" id="shipping">
+            <p>Free shipping over $100. Delivery in 3–5 business days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="modal-close" id="close-modal" aria-label="Close">×</button>
+      <h2 id="modal-title">Welcome back</h2>
+      <p class="modal-sub">Sign in to continue checkout</p>
+      <form id="login-form">
+        <label>
+          Email
+          <input type="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Password
+          <input type="password" placeholder="••••••••" required />
+        </label>
+        <button type="submit" class="btn primary full">Sign in</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
